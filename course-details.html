@@ -28,44 +28,38 @@
 
     <section class="page-hero" style="padding-bottom: 20px;">
         <div>
-            <h1 id="course-title">Autodesk Revit Complete Masterclass</h1>
-            <p id="course-desc">From absolute zero to professional engineering modeling.</p>
+            <h1>Autodesk Revit Complete Masterclass</h1>
+            <p>From absolute zero to professional engineering modeling.</p>
         </div>
     </section>
 
-    <!-- الهيكل الجديد المطابق تماماً للصورة -->
     <div class="course-details-layout">
         <div>
-            <!-- تبويبات التنقل -->
             <div class="course-tabs">
                 <button class="tab-btn active" onclick="switchTab(event, 'description')"><i class="fa-solid fa-book-open"></i> Description</button>
                 <button class="tab-btn" onclick="switchTab(event, 'instructor')"><i class="fa-solid fa-chalkboard-user"></i> Instructor</button>
                 <button class="tab-btn" onclick="switchTab(event, 'curriculum')"><i class="fa-solid fa-list-check"></i> Curriculum</button>
             </div>
 
-            <!-- محتوى تبويب الوصف -->
             <div id="description" class="tab-content active course-main-info">
                 <h2>About This Course</h2>
-                <p id="course-text-1">Master modern engineering workflows and building information modeling. Learn how to transform complex architectural and structural concepts into highly accurate digital prototypes.</p>
-                <p id="course-text-2">Gain complete mastery over parametric components, multidisciplinary coordination, clash detection, and construction document generation following strict industry standards.</p>
+                <p>Master modern engineering workflows and building information modeling. Learn how to transform complex architectural and structural concepts into highly accurate digital prototypes.</p>
+                <p>Gain complete mastery over parametric components, multidisciplinary coordination, clash detection, and construction document generation following strict industry standards.</p>
             </div>
 
-            <!-- محتوى تبويب المحاضر -->
             <div id="instructor" class="tab-content course-main-info">
                 <h2>Lead Instructor</h2>
-                <p>T0-BIM Expert Engineering Team with over 10 years of field experience in international BIM implementation, structural analysis, and automated tool development using C++ and APIs.</p>
+                <p>T0-BIM Expert Engineering Team with over 10 years of field experience in international BIM implementation, structural analysis, and automated tool development.</p>
             </div>
 
-            <!-- محتوى تبويب المنهج -->
             <div id="curriculum" class="tab-content course-main-info">
                 <h2>Course Curriculum & Modules</h2>
                 <p>• Module 1: Introduction to BIM and Interface Setup.<br>• Module 2: Advanced Parametric Modeling.<br>• Module 3: Multidisciplinary Coordination and Clash Detection.<br>• Module 4: Final Project Execution and Shop Drawings.</p>
             </div>
         </div>
 
-        <!-- البطاقة الجانبية للسعر وزر التسجيل -->
         <div class="enroll-card">
-            <img src="TOBIM.jpg" alt="Course Thumbnail">
+            <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80" alt="Course Thumbnail">
             <div style="font-size: 13px; opacity: 0.7; margin-bottom: 5px;">Total Price:</div>
             <div class="price-tag">799.00 EGP</div>
             <ul class="features-list">
@@ -85,10 +79,8 @@
         function switchTab(evt, tabName) {
             const contents = document.querySelectorAll(".tab-content");
             contents.forEach(c => c.classList.remove("active"));
-
             const buttons = document.querySelectorAll(".tab-btn");
             buttons.forEach(b => b.classList.remove("active"));
-
             document.getElementById(tabName).classList.add("active");
             evt.currentTarget.classList.add("active");
         }
