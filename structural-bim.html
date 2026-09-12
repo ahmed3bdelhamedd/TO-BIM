@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Structural BIM - T0-BIM</title>
+    <title>Structural BIM Technical Office Diploma - T0-BIM</title>
     <link rel="icon" type="image/jpeg" href="TOBIM.jpg">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
@@ -36,28 +36,67 @@
 
     <section class="page-hero">
         <div>
-            <h1>Structural BIM Solutions</h1>
-            <p>Precise concrete detailing, analysis, and execution plans by elite structural engineers.</p>
+            <h1>Structure BIM Technical Office Diploma</h1>
+            <p>Step into the vanguard of engineering with a Structural BIM Diploma! Master the art of Building Information Modeling, CDE within ACC, and design analysis with unprecedented accuracy.</p>
+            <div class="stats-bar" style="display: flex; justify-content: center; gap: 30px; margin-top: 20px;">
+                <div class="stat-item" style="background: var(--card-bg); border: 1px solid var(--border-color); padding: 10px 25px; border-radius: 12px; font-weight: 700;"><i class="fa-solid fa-clock"></i> <span style="color: var(--accent-color);">+200 Hours</span> Training</div>
+                <div class="stat-item" style="background: var(--card-bg); border: 1px solid var(--border-color); padding: 10px 25px; border-radius: 12px; font-weight: 700;"><i class="fa-solid fa-users"></i> <span style="color: var(--accent-color);">+10k</span> Certified Trainees</div>
+            </div>
         </div>
     </section>
 
-    <div class="courses-container">
-        <div class="course-card">
-            <img src="https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=600&q=80" alt="Structural Engineer">
-            <div class="course-content">
-                <h3>Revit Structure & Robot Analysis</h3>
-                <p>Real student deliverables demonstrating high-load structural calculations.</p>
+    <div class="course-details-layout">
+        <div>
+            <div class="course-tabs">
+                <button class="tab-btn active" onclick="switchTab(event, 'description')"><i class="fa-solid fa-book-open"></i> Description</button>
+                <button class="tab-btn" onclick="switchTab(event, 'instructor')"><i class="fa-solid fa-chalkboard-user"></i> Instructor</button>
+                <button class="tab-btn" onclick="switchTab(event, 'curriculum')"><i class="fa-solid fa-list-check"></i> Curriculum</button>
             </div>
-            <div class="course-footer">
-                <span class="price">Advanced</span>
-                <a href="course-details.html" class="details-btn">Details</a>
+
+            <div id="description" class="tab-content active course-main-info">
+                <h2>About Structural BIM Diploma</h2>
+                <p>This program propels you into a high-tech realm where precision meets creativity, empowering you to design and analyze structures with unprecedented accuracy. Master the art of Building Information Modeling and harness its transformative power to streamline construction processes, optimize performance, and elevate project outcomes.</p>
+                <p>Practical Implementation of the Common Data Environment (CDE) within ACC: Understand and apply the principles of a CDE to streamline information management and project workflows.</p>
             </div>
+
+            <div id="instructor" class="tab-content course-main-info">
+                <h2>Lead Instructor</h2>
+                <p><strong>Eng. Salah Elbadawy</strong><br>Autodesk Certified Instructor, BIM Manager in Dubai. Trained hundreds of engineers across Egypt, Kuwait, the UAE, and Qatar. Contributed to major projects with leading offices like Shifto, Arch Zone, Amo, and Hussein Saber.</p>
+            </div>
+
+            <div id="curriculum" class="tab-content course-main-info">
+                <h2>Program Modules & Phases</h2>
+                <p>• Phase 1: Advanced Revit Structure & Concrete Modeling.<br>• Phase 2: Structural Analysis & Robot Structural Integration.<br>• Phase 3: Common Data Environment (CDE) Implementation via ACC.<br>• Phase 4: Shop Drawings, Quantity Takeoff, and Clash Detection.</p>
+            </div>
+        </div>
+
+        <div class="enroll-card">
+            <img src="https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=600&q=80" alt="Structural Diploma">
+            <div style="font-size: 13px; opacity: 0.7; margin-bottom: 5px;">Total Price:</div>
+            <div class="price-tag">1,499.00 EGP</div>
+            <ul class="features-list">
+                <li><i class="fa-solid fa-check"></i> Lifetime access to all structural labs</li>
+                <li><i class="fa-solid fa-check"></i> ACC & CDE practical workflows</li>
+                <li><i class="fa-solid fa-check"></i> Support via Vodafone Cash & InstaPay</li>
+            </ul>
+            <a href="contact.html" class="enroll-btn">Book Your Seat Now</a>
         </div>
     </div>
 
     <footer>
         @2026 T0-BIM
     </footer>
+
+    <script>
+        function switchTab(evt, tabName) {
+            const contents = document.querySelectorAll(".tab-content");
+            contents.forEach(c => c.classList.remove("active"));
+            const buttons = document.querySelectorAll(".tab-btn");
+            buttons.forEach(b => b.classList.remove("active"));
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
     <script src="js/script.js"></script>
 </body>
 </html>
