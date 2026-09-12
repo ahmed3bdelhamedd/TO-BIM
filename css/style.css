@@ -15,6 +15,10 @@ body {
     background-color: var(--bg-main);
     color: var(--text-color);
     overflow-x: hidden;
+    /* إضافة خلفية هندسية شبكية خفيفة تدي طابع هندسي احترافي */
+    background-image: linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    background-size: 40px 40px;
 }
 
 /* الهيدر المتطور */
@@ -38,6 +42,16 @@ body {
     font-weight: 900;
     color: #fff;
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 .logo span {
@@ -189,7 +203,7 @@ body {
     color: #0b0f19;
 }
 
-/* ثيم البيم الإنشائي (أصفر وأبيض) */
+/* الثيمات المخصصة لكل صفحة */
 body.structural-theme {
     --bg-main: #121212;
     --accent-color: #fbc531;
@@ -203,7 +217,6 @@ body.structural-theme .register-btn {
     box-shadow: 0 4px 15px rgba(251, 197, 49, 0.3);
 }
 
-/* ثيم البيم المعماري (أزرق وأبيض) */
 body.architectural-theme {
     --bg-main: #0c1b2a;
     --accent-color: #48dbfb;
@@ -215,4 +228,17 @@ body.architectural-theme .register-btn {
     background: #48dbfb;
     color: #0c1b2a !important;
     box-shadow: 0 4px 15px rgba(72, 219, 251, 0.3);
+}
+
+body.contact-theme {
+    --bg-main: #0f172a;
+    --accent-color: #06b6d4;
+}
+body.contact-theme .page-hero h1 {
+    color: #06b6d4;
+}
+body.contact-theme .register-btn {
+    background: #06b6d4;
+    color: #0f172a !important;
+    box-shadow: 0 4px 15px rgba(6, 182, 212, 0.3);
 }
