@@ -3,26 +3,507 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Architectural BIM - T0-BIM</title>
+    <title>Architectural BIM Technical Office Diploma - T0-BIM</title>
     <link rel="icon" type="image/jpeg" href="TOBIM.jpg">
-    <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-gold: #fbc531;
+            --dark-bg: #0b0f19;
+            --dark-card: #131722;
+            --border-gold: rgba(251, 197, 49, 0.2);
+            --text-main: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: var(--text-main);
+            direction: ltr;
+            text-align: left;
+        }
+
+        .header {
+            position: fixed;
+            top: 0; left: 0; width: 100%;
+            background: rgba(11, 15, 25, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-gold);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 8%;
+            z-index: 1000;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 900;
+            font-size: 20px;
+        }
+
+        .logo img {
+            width: 40px; height: 40px;
+            border-radius: 50%;
+            border: 2px solid var(--primary-gold);
+        }
+
+        .logo span {
+            color: var(--primary-gold);
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .navbar a {
+            color: #dcdde1;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        .navbar a:hover, .navbar a.active {
+            color: var(--primary-gold);
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .header-actions button, .header-actions a {
+            background: transparent;
+            border: 1px solid var(--border-gold);
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .header-actions .register-btn {
+            background: var(--primary-gold);
+            color: #0b0f19;
+            border: none;
+        }
+
+        .elite-hero {
+            position: relative;
+            padding: 160px 8% 80px 8%;
+            background: linear-gradient(135deg, rgba(19, 23, 34, 0.95), rgba(11, 15, 25, 0.98));
+            border-bottom: 3px solid var(--primary-gold);
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        @media (max-width: 960px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .elite-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(251, 197, 49, 0.12);
+            border: 1px solid var(--primary-gold);
+            color: var(--primary-gold);
+            padding: 8px 18px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 13px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .elite-hero h1 {
+            font-size: 42px;
+            font-weight: 900;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .elite-hero h1 span {
+            color: var(--primary-gold);
+        }
+
+        .elite-hero p {
+            font-size: 16px;
+            line-height: 1.8;
+            opacity: 0.85;
+            margin-bottom: 30px;
+            color: #dcdde1;
+        }
+
+        .hero-stats-row {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .stat-pill {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 12px 22px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 700;
+            font-size: 15px;
+        }
+
+        .stat-pill i {
+            color: var(--primary-gold);
+            font-size: 18px;
+        }
+
+        .hero-img-box {
+            border-radius: 20px;
+            overflow: hidden;
+            border: 2px solid var(--primary-gold);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+            background: #1a1a1a;
+        }
+
+        .hero-img-box img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .gallery-section {
+            padding: 60px 8%;
+            background: var(--dark-bg);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            font-weight: 900;
+            margin-bottom: 10px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 15px;
+            opacity: 0.7;
+            max-width: 650px;
+            margin: 0 auto 40px auto;
+            line-height: 1.6;
+        }
+
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+
+        .pillar-card {
+            background: var(--dark-card);
+            border: 1px solid var(--border-gold);
+            padding: 30px 20px;
+            border-radius: 18px;
+            transition: 0.3s ease;
+        }
+
+        .pillar-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-gold);
+        }
+
+        .pillar-icon {
+            width: 55px; height: 55px;
+            background: rgba(251, 197, 49, 0.1);
+            border-radius: 12px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 22px;
+            color: var(--primary-gold);
+            margin-bottom: 20px;
+        }
+
+        .pillar-card h3 {
+            font-size: 19px;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+
+        .pillar-card p {
+            font-size: 14px;
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+
+        /* Working Independent 10-Image Architectural Slider */
+        .arch-slider-section {
+            padding: 60px 8%;
+            background: var(--dark-card);
+            border-top: 1px solid var(--border-gold);
+            border-bottom: 1px solid var(--border-gold);
+        }
+
+        .arch-carousel-wrapper {
+            position: relative;
+            max-width: 850px;
+            margin: 0 auto;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 2px solid var(--primary-gold);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            background: #1a1a1a;
+            height: 420px;
+        }
+
+        .arch-carousel-slide {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            display: none;
+        }
+
+        .arch-carousel-slide.active {
+            display: block;
+        }
+
+        .arch-carousel-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .arch-carousel-caption {
+            position: absolute;
+            bottom: 0; left: 0; width: 100%;
+            background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+            padding: 30px 20px 20px 20px;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 800;
+        }
+
+        .arch-nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(19, 23, 34, 0.85);
+            border: 2px solid var(--primary-gold);
+            color: var(--primary-gold);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            z-index: 10;
+            transition: 0.3s;
+        }
+
+        .arch-nav-btn:hover {
+            background: var(--primary-gold);
+            color: #0b0f19;
+        }
+
+        .arch-nav-btn.arch-prev { left: 20px; }
+        .arch-nav-btn.arch-next { right: 20px; }
+
+        .roadmap-section {
+            padding: 60px 8%;
+            background: var(--dark-bg);
+        }
+
+        .roadmap-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+        }
+
+        .roadmap-step {
+            background: var(--dark-card);
+            border: 1px solid var(--border-gold);
+            padding: 30px 20px;
+            border-radius: 16px;
+            position: relative;
+            transition: 0.3s;
+        }
+
+        .roadmap-step:hover {
+            border-color: var(--primary-gold);
+            transform: translateY(-5px);
+        }
+
+        .step-tag {
+            font-size: 12px;
+            font-weight: 800;
+            color: var(--primary-gold);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .roadmap-step h4 {
+            font-size: 18px;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+
+        .roadmap-step p {
+            font-size: 14px;
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+
+        .expert-card {
+            background: linear-gradient(135deg, var(--dark-card), #0b0f19);
+            border: 2px solid var(--primary-gold);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 60px 8%;
+            display: grid;
+            grid-template-columns: 260px 1fr;
+            gap: 35px;
+            align-items: center;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+
+        @media (max-width: 900px) {
+            .expert-card {
+                grid-template-columns: 1fr;
+                text-align: center;
+                padding: 30px;
+            }
+        }
+
+        .expert-img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+            object-position: center 5%;
+            border-radius: 14px;
+            border: 2px solid var(--primary-gold);
+        }
+
+        .expert-info h2 {
+            font-size: 28px;
+            font-weight: 900;
+            color: #fff;
+            margin: 12px 0 8px 0;
+        }
+
+        .expert-info p {
+            font-size: 14.5px;
+            line-height: 1.7;
+            opacity: 0.85;
+            color: #dcdde1;
+            margin-bottom: 15px;
+        }
+
+        .ultimate-pricing {
+            background: linear-gradient(145deg, var(--dark-card), var(--dark-bg));
+            border: 2px solid var(--primary-gold);
+            border-radius: 20px;
+            padding: 50px 30px;
+            text-align: center;
+            max-width: 600px;
+            margin: 60px auto;
+            box-shadow: 0 20px 40px rgba(251, 197, 49, 0.15);
+        }
+
+        .ultimate-pricing h2 {
+            font-size: 32px;
+            font-weight: 900;
+            margin-bottom: 8px;
+        }
+
+        .price-display {
+            font-size: 48px;
+            font-weight: 900;
+            color: var(--primary-gold);
+            margin: 20px 0;
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 30px;
+            text-align: left;
+            display: inline-block;
+        }
+
+        .pricing-features li {
+            margin-bottom: 12px;
+            font-size: 14.5px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            opacity: 0.9;
+        }
+
+        .pricing-features li i {
+            color: #2ecc71;
+        }
+
+        .btn-book-now {
+            display: inline-block;
+            background: linear-gradient(135deg, #fbc531, #e1b12c);
+            color: #0b0f19;
+            padding: 15px 45px;
+            border-radius: 40px;
+            font-weight: 900;
+            font-size: 16px;
+            text-decoration: none;
+            box-shadow: 0 10px 25px rgba(251, 197, 49, 0.4);
+            transition: 0.3s;
+        }
+
+        .btn-book-now:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(251, 197, 49, 0.6);
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            border-top: 1px solid var(--border-gold);
+            opacity: 0.7;
+            font-size: 14px;
+        }
+    </style>
 </head>
-<body class="architectural-theme dark-mode">
+<body>
     <header class="header">
         <a href="index.html" class="logo">
             <img src="TOBIM.jpg" alt="T0-BIM Logo"> T0-BIM <span>Architectural</span>
         </a>
         <nav class="navbar">
             <a href="index.html">Home</a>
-            <div class="dropdown">
-                <a href="#" class="active">Services <i class="fas fa-chevron-down" style="font-size: 10px;"></i></a>
-                <div class="dropdown-content">
-                    <a href="structural-bim.html">Structural BIM</a>
-                    <a href="architectural-bim.html">Architectural BIM</a>
-                </div>
-            </div>
             <a href="courses.html">Courses</a>
             <a href="contact.html">Contact Us</a>
         </nav>
@@ -34,30 +515,183 @@
         </div>
     </header>
 
-    <section class="page-hero">
-        <div>
-            <h1>Architectural BIM Solutions</h1>
-            <p>Creative design workflows and realistic rendering models produced by our students.</p>
+    <!-- Elite Hero Section (Modern Architectural Building) -->
+    <section class="elite-hero">
+        <div class="hero-grid">
+            <div>
+                <div class="elite-badge"><i class="fa-solid fa-crown"></i> Elite Technical Office Diploma</div>
+                <h1>Architectural BIM <span>Technical Office Diploma</span></h1>
+                <p>Master the art of architectural modeling, interior detailing, spatial coordination, and construction documentation with state-of-the-art BIM workflows.</p>
+                
+                <div class="hero-stats-row">
+                    <div class="stat-pill"><i class="fa-solid fa-clock"></i> +200 Training Hours</div>
+                    <div class="stat-pill"><i class="fa-solid fa-users"></i> +10k Certified Trainees</div>
+                </div>
+            </div>
+            <div class="hero-img-box">
+                <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=700&q=80" alt="Modern Architectural Building" onerror="this.src='https://picsum.photos/700/350?random=100'">
+            </div>
         </div>
     </section>
 
-    <div class="courses-container">
-        <div class="course-card">
-            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80" alt="Architectural Work">
-            <div class="course-content">
-                <h3>Revit & 3ds Max Masterclass</h3>
-                <p>Outstanding student portfolio piece showcasing spatial interior rendering.</p>
+    <!-- Architectural Core Pillars -->
+    <section class="gallery-section">
+        <h2 class="section-title">Program Core Pillars</h2>
+        <p class="section-subtitle">Comprehensive breakdown covering architectural design standards, parametric families, and documentation.</p>
+        
+        <div class="pillars-grid">
+            <div class="pillar-card">
+                <div class="pillar-icon"><i class="fa-solid fa-building"></i></div>
+                <h3>Advanced Revit Architecture</h3>
+                <p>Master conceptual massing, complex curtain walls, floors, roofs, staircases, and custom parametric architectural families.</p>
             </div>
-            <div class="course-footer">
-                <span class="price">Advanced</span>
-                <a href="course-details.html" class="details-btn">Details</a>
+            <div class="pillar-card">
+                <div class="pillar-icon"><i class="fa-solid fa-layer-group"></i></div>
+                <h3>Interior & Finishes Detailing</h3>
+                <p>Develop comprehensive interior elevations, flooring patterns, ceiling layouts, material schedules, and precise joinery shop drawings.</p>
+            </div>
+            <div class="pillar-card">
+                <div class="pillar-icon"><i class="fa-solid fa-compass-drafting"></i></div>
+                <h3>Documentation & Schedules</h3>
+                <p>Produce professional architectural working drawings, door/window schedules, keynotes, and fully coordinated plan layouts.</p>
+            </div>
+            <div class="pillar-card">
+                <div class="pillar-icon"><i class="fa-solid fa-network-wired"></i></div>
+                <h3>BIM Coordination & CDE</h3>
+                <p>Manage multi-disciplinary collaborative workflows through Autodesk Construction Cloud (ACC) and automated clash detection.</p>
             </div>
         </div>
+    </section>
+
+    <!-- Working Independent 10-Image Architectural Gallery Slider -->
+    <section class="arch-slider-section">
+        <h2 class="section-title">Architectural Engineering Gallery</h2>
+        <p class="section-subtitle">Browse through 10 professional architectural modeling, interior design, and facade detailing examples using navigation arrows.</p>
+        
+        <div class="arch-carousel-wrapper">
+            <button class="arch-nav-btn arch-prev" onclick="changeArchSlide(-1)"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="arch-nav-btn arch-next" onclick="changeArchSlide(1)"><i class="fa-solid fa-chevron-right"></i></button>
+            
+            <div class="arch-carousel-inner">
+                <div class="arch-carousel-slide active">
+                    <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1000&q=80" alt="Modern Architecture" onerror="this.src='https://picsum.photos/1000/420?random=11'">
+                    <div class="arch-carousel-caption">01. Modern Architectural Building Design & Façade Modeling</div>
+                </div>
+                <div class="arch-carousel-slide">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80" alt="Interior Design" onerror="this.src='https://picsum.photos/1000/420?random=12'">
+                    <div class="arch-carousel-caption">02. Luxury Interior Space Planning & Finishes</div>
+                </div>
+                <div class="arch-carousel-slide">
+                    <img src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1000&q=80" alt="Curtain Walls" onerror="this.src='https://picsum.photos/1000/420?random=13'">
+                    <div class="arch-carousel-caption">03. Complex Parametric Curtain Wall Systems</div>
+                </div>
+                <div class="arch-carousel-slide">
+                    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1000&q=80" alt="Urban Planning" onerror="this.src='https://picsum.photos/1000/420?random=14'">
+                    <div class="arch-carousel-caption">04. Urban Tower Conceptual Massing & Zoning</div>
+                </div>
+                <div class="arch-carousel-slide">
+                    <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=80" alt="Spatial Joinery" onerror="this.src='https://picsum.photos/1000/420?random=15'">
+                    <div class="arch-carousel-caption">05. Detailed Interior Joinery & Millwork Drawings</div>
+                </div>
+                <div class="arch-carousel-slide">
+                    <img src="https://images.unsplash.com/photo-1541888946425-d0fbb18f1f3e?auto=format&fit=crop&w=1000&q=80" alt="Site Planning" onerror="this.src='https://picsum.photos/1000/420?random=16'">
+                    <div class="arch-carousel-caption">06. Site Topography & Landscape Integration</div>
+                </div>
+                <div class="arch-carousel-slide">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1000&q=80" alt="Commercial Complex" onerror="this.src='https://picsum.photos/1000/420?random=17'">
+                    <div class="arch-carousel-caption">07. Commercial Complex Working Document Sets</div>
+                </div>
+                <div class="arch-carousel-slide">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1000&q=80" alt="Studio Collaboration" onerror="this.src='https://picsum.photos/1000/420?random=18'">
+                    <div class="arch-carousel-caption">08. Architectural Studio BIM Workflow Lab</div>
+                </div>
+                <div class="arch-carousel-slide">
+                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1000&q=80" alt="Clash Detection" onerror="this.src='https://picsum.photos/1000/420?random=19'">
+                    <div class="arch-carousel-caption">09. Multi-Disciplinary Coordination & Clash Resolution</div>
+                </div>
+                <div class="arch-carousel-slide">
+                    <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1000&q=80" alt="Final Documentation" onerror="this.src='https://picsum.photos/1000/420?random=20'">
+                    <div class="arch-carousel-caption">10. Final Architectural Deliverables & Portfolio Review</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diploma Phases & Roadmap -->
+    <section class="roadmap-section">
+        <h2 class="section-title">Diploma Phases & Roadmap</h2>
+        <p class="section-subtitle">Step-by-step training roadmap designed to take you from beginner to professional Architectural BIM Manager.</p>
+        
+        <div class="roadmap-grid">
+            <div class="roadmap-step">
+                <span class="step-tag">Phase 01</span>
+                <h4>Architectural Basics & Revit</h4>
+                <p>Setting up project templates, grids, levels, walls, doors, windows, and core architectural components.</p>
+            </div>
+            <div class="roadmap-step">
+                <span class="step-tag">Phase 02</span>
+                <h4>Advanced Modeling & Families</h4>
+                <p>Creating curtain walls, stairs, ramps, railings, roofs, and custom parametric family creation.</p>
+            </div>
+            <div class="roadmap-step">
+                <span class="step-tag">Phase 03</span>
+                <h4>Interior & Shop Drawings</h4>
+                <p>Detailed interior floor finishes, ceiling plans, furniture layouts, and comprehensive shop drawing sheets.</p>
+            </div>
+            <div class="roadmap-step">
+                <span class="step-tag">Phase 04</span>
+                <h4>Graduation Portfolio Project</h4>
+                <p>Executing a full-scale multi-story architectural building, schedules extraction, and final presentation portfolio.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instructor Profile -->
+    <div class="expert-card">
+        <img src="Salah.jpg" alt="Eng. Salah Elbadawy" class="expert-img" onerror="this.src='https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80'">
+        <div class="expert-info">
+            <span class="elite-badge">Lead Expert Instructor</span>
+            <h2>Eng. Salah Elbadawy</h2>
+            <p>Autodesk Certified Instructor and BIM Manager in Dubai. Successfully trained thousands of engineers across Egypt, Kuwait, the UAE, and Qatar.</p>
+            <p style="margin-bottom: 0;">Contributed extensively to major landmark projects partnering with elite engineering offices including Shifto, Arch Zone, Amo, and Hussein Saber.</p>
+        </div>
+    </div>
+
+    <!-- Pricing Card -->
+    <div class="ultimate-pricing">
+        <span class="elite-badge">Special Enrollment</span>
+        <h2>Architectural BIM Diploma</h2>
+        <p style="opacity: 0.8; font-size: 14px;">Gain lifelong access to all lectures, technical labs, CDE workflows, and direct mentorship.</p>
+        
+        <div class="price-display">8,900.00 EGP</div>
+        
+        <ul class="pricing-features">
+            <li><i class="fa-solid fa-check-circle"></i> Full Access to ACC & CDE practical simulations</li>
+            <li><i class="fa-solid fa-check-circle"></i> Direct Support via Vodafone Cash & InstaPay</li>
+            <li><i class="fa-solid fa-check-circle"></i> Official T0-BIM Professional Certificate</li>
+        </ul>
+        <br>
+        <a href="contact.html" class="btn-book-now">Book Your Seat Now</a>
     </div>
 
     <footer>
         @2026 T0-BIM
     </footer>
-    <script src="js/script.js"></script>
+
+    <script>
+        let archIndex = 0;
+        const archSlides = document.querySelectorAll('.arch-carousel-slide');
+
+        function changeArchSlide(direction) {
+            archSlides[archIndex].classList.remove('active');
+            archIndex += direction;
+            if (archIndex < 0) {
+                archIndex = archSlides.length - 1;
+            } else if (archIndex >= archSlides.length) {
+                archIndex = 0;
+            }
+            archSlides[archIndex].classList.add('active');
+        }
+    </script>
 </body>
 </html>
