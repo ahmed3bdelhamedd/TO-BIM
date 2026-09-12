@@ -175,7 +175,7 @@
             line-height: 1.6;
         }
 
-        /* Unique Engineering Gallery Slider (10 Photos) */
+        /* Fixed 10-Image Engineering Showcase Slider */
         .eng-slider-section {
             padding: 60px 8%;
             background: var(--card-bg);
@@ -196,13 +196,16 @@
 
         .eng-carousel-track {
             display: flex;
-            transition: transform 0.5s ease-in-out;
+            width: 100%;
+            transition: transform 0.4s ease-in-out;
         }
 
         .eng-carousel-slide {
             min-width: 100%;
-            height: 450px;
+            width: 100%;
+            height: 420px;
             position: relative;
+            flex-shrink: 0;
         }
 
         .eng-carousel-slide img {
@@ -249,7 +252,6 @@
         .eng-nav-btn.eng-prev { left: 20px; }
         .eng-nav-btn.eng-next { right: 20px; }
 
-        /* Roadmap Section (Clean Cards without image bugs) */
         .roadmap-section {
             padding: 60px 8%;
             background: var(--bg-main);
@@ -476,7 +478,7 @@
         </div>
     </section>
 
-    <!-- Interactive 10-Image Engineering Showcase Slider (Independent from Phases) -->
+    <!-- Fixed 10-Image Engineering Showcase Slider -->
     <section class="eng-slider-section">
         <h2 class="section-title">Structural Engineering Gallery</h2>
         <p class="section-subtitle">Browse through 10 professional structural modeling, rebar detailing, and site execution examples using the navigation arrows.</p>
@@ -530,7 +532,7 @@
         </div>
     </section>
 
-    <!-- Diploma Phases & Roadmap (Text cards) -->
+    <!-- Diploma Phases & Roadmap -->
     <section class="roadmap-section">
         <h2 class="section-title">Diploma Phases & Roadmap</h2>
         <p class="section-subtitle">Step-by-step training roadmap designed to take you from beginner to professional BIM Manager.</p>
