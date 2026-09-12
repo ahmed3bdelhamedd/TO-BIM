@@ -6,23 +6,35 @@
     <title>تواصل معنا | TOBIM Academy</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <header class="header">
-        <div class="logo">TOBIM <span>Contact</span></div>
+        <a href="index.html" class="logo">TOBIM <span>Contact</span></a>
         <nav class="navbar">
             <a href="index.html">الرئيسية</a>
-            <a href="structural-bim.html">البيم الإنشائي</a>
-            <a href="architectural-bim.html">البيم المعماري</a>
+            <div class="dropdown">
+                <a href="#">الدبلومات الهندسية <i class="fas fa-chevron-down" style="font-size: 10px;"></i></a>
+                <div class="dropdown-content">
+                    <a href="structural-bim.html">البيم الإنشائي</a>
+                    <a href="architectural-bim.html">البيم المعماري</a>
+                </div>
+            </div>
             <a href="courses.html">الكورسات</a>
-            <a href="contact.html" class="active btn-contact">تواصل معنا</a>
+            <a href="contact.html" class="active">تواصل معنا</a>
         </nav>
+        <div class="header-actions">
+            <button class="lang-btn">EN</button>
+            <a href="#" class="login-btn">تسجيل الدخول</a>
+            <a href="#" class="register-btn">إنشاء حساب</a>
+        </div>
     </header>
 
     <section class="page-hero">
         <div>
-            <h1>تواصل مع فريق توبيم</h1>
-            <p>نحن هنا للإجابة عن استفساراتك ومساعدتك في اختيار المسار التدريبي الأنسب لك.</p>
+            <h1>تواصل مع فريق توبيم أكاديمي</h1>
+            <p>نحن هنا دائماً للإجابة عن استفساراتك ومساعدتك في اختيار المسار التدريبي الأنسب لمستقبلك المهني.</p>
+            <a href="index.html" class="btn btn-main">العودة للرئيسية</a>
         </div>
     </section>
 </body>
