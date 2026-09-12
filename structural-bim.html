@@ -260,7 +260,7 @@
             line-height: 1.6;
         }
 
-        /* 10-Image Slider */
+        /* Working Independent 10-Image Slider */
         .eng-slider-section {
             padding: 60px 8%;
             background: var(--dark-card);
@@ -283,14 +283,11 @@
         .eng-carousel-slide {
             position: absolute;
             top: 0; left: 0; width: 100%; height: 100%;
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.5s ease-in-out;
+            display: none;
         }
 
         .eng-carousel-slide.active {
-            opacity: 1;
-            visibility: visible;
+            display: block;
         }
 
         .eng-carousel-slide img {
@@ -566,16 +563,16 @@
         </div>
     </section>
 
-    <!-- Independent 10-Image Engineering Showcase Slider (First image shows structural details) -->
+    <!-- Working Independent 10-Image Engineering Showcase Slider -->
     <section class="eng-slider-section">
         <h2 class="section-title">Structural Engineering Gallery</h2>
         <p class="section-subtitle">Browse through 10 professional structural modeling, rebar detailing, and site execution examples using the navigation arrows.</p>
         
         <div class="eng-carousel-wrapper">
-            <button class="eng-nav-btn eng-prev" onclick="moveEngCarousel(-1)"><i class="fa-solid fa-chevron-left"></i></button>
-            <button class="eng-nav-btn eng-next" onclick="moveEngCarousel(1)"><i class="fa-solid fa-chevron-right"></i></button>
+            <button class="eng-nav-btn eng-prev" onclick="changeSlide(-1)"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="eng-nav-btn eng-next" onclick="changeSlide(1)"><i class="fa-solid fa-chevron-right"></i></button>
             
-            <div class="eng-carousel-track">
+            <div class="eng-carousel-inner">
                 <div class="eng-carousel-slide active">
                     <img src="https://images.unsplash.com/photo-1541888946425-d0fbb18f1f3e?auto=format&fit=crop&w=1000&q=80" alt="Structural Details">
                     <div class="eng-carousel-caption">01. Advanced Structural Framing & Detailed Concrete Elements</div>
@@ -682,18 +679,18 @@
     </footer>
 
     <script>
-        let engSlideIndex = 0;
-        const engSlides = document.querySelectorAll('.eng-carousel-slide');
+        let currentIndex = 0;
+        const slides = document.querySelectorAll('.eng-carousel-slide');
 
-        function moveEngCarousel(direction) {
-            engSlides[engSlideIndex].classList.remove('active');
-            engSlideIndex += direction;
-            if (engSlideIndex < 0) {
-                engSlideIndex = engSlides.length - 1;
-            } else if (engSlideIndex >= engSlides.length) {
-                engSlideIndex = 0;
+        function changeSlide(direction) {
+            slides[currentIndex].classList.remove('active');
+            currentIndex += direction;
+            if (currentIndex < 0) {
+                currentIndex = slides.length - 1;
+            } else if (currentIndex >= slides.length) {
+                currentIndex = 0;
             }
-            engSlides[engSlideIndex].classList.add('active');
+            slides[currentIndex].classList.add('active');
         }
     </script>
 </body>
