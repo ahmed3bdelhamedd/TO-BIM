@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Course Details - T0-BIM</title>
+    <title>Courses - T0-BIM</title>
     <link rel="icon" type="image/jpeg" href="TOBIM.jpg">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
@@ -12,30 +12,50 @@
 <body class="dark-mode">
     <header class="header">
         <a href="index.html" class="logo">
-            <img src="TOBIM.jpg" alt="T0-BIM Logo"> T0-BIM <span>Details</span>
+            <img src="TOBIM.jpg" alt="T0-BIM Logo"> T0-BIM <span>Courses</span>
         </a>
         <nav class="navbar">
             <a href="index.html">Home</a>
-            <a href="courses.html">Courses</a>
+            <a href="courses.html" class="active">Courses</a>
             <a href="contact.html">Contact Us</a>
         </nav>
         <div class="header-actions">
             <button class="mode-btn">☀️ Light</button>
             <button class="lang-btn">AR</button>
-            <a href="contact.html" class="register-btn">Enroll Now</a>
+            <a href="#" class="register-btn">Register</a>
         </div>
     </header>
 
     <section class="page-hero">
         <div>
-            <h1 id="course-title">Loading Course Details...</h1>
-            <p id="course-desc">Comprehensive curriculum, practical training modules, and engineering outcomes.</p>
+            <h1>Specialized Engineering Programs</h1>
+            <p>Master Autodesk Revit, 3ds Max, Navisworks, and C++ automation.</p>
         </div>
     </section>
 
-    <div style="padding: 0 8% 60px 8%; text-align: center;">
-        <img src="TOBIM.jpg" alt="Course Banner" style="max-width: 600px; width: 100%; border-radius: 12px; border: 1px solid var(--border-color); margin-bottom: 30px;">
-        <p id="course-details-text" style="max-width: 700px; margin: 0 auto; line-height: 1.8; opacity: 0.9;">Please wait while we load the complete syllabus and project requirements for this specific engineering course.</p>
+    <div class="courses-container">
+        <div class="course-card">
+            <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80" alt="Revit Course">
+            <div class="course-content">
+                <h3>Autodesk Revit Complete</h3>
+                <p>From absolute zero to professional engineering modeling.</p>
+            </div>
+            <div class="course-footer">
+                <span class="price">Revit</span>
+                <a href="course-details.html#revit" class="details-btn">View Details</a>
+            </div>
+        </div>
+        <div class="course-card">
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80" alt="3ds Max Course">
+            <div class="course-content">
+                <h3>3ds Max Architectural Visualization</h3>
+                <p>Realistic rendering and advanced spatial design techniques.</p>
+            </div>
+            <div class="course-footer">
+                <span class="price">3ds Max</span>
+                <a href="course-details.html#max" class="details-btn">View Details</a>
+            </div>
+        </div>
     </div>
 
     <footer>
