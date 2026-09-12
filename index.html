@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Courses - T0-BIM</title>
+    <title>T0-BIM - Engineering Solutions</title>
     <link rel="icon" type="image/jpeg" href="TOBIM.jpg">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
@@ -12,11 +12,18 @@
 <body class="dark-mode">
     <header class="header">
         <a href="index.html" class="logo">
-            <img src="TOBIM.jpg" alt="T0-BIM Logo"> T0-BIM <span>Courses</span>
+            <img src="TOBIM.jpg" alt="T0-BIM Logo"> T0-BIM <span>Company</span>
         </a>
         <nav class="navbar">
-            <a href="index.html">Home</a>
-            <a href="courses.html" class="active">Courses</a>
+            <a href="index.html" class="active">Home</a>
+            <div class="dropdown">
+                <a href="#">Services <i class="fas fa-chevron-down" style="font-size: 10px;"></i></a>
+                <div class="dropdown-content">
+                    <a href="structural-bim.html">Structural BIM</a>
+                    <a href="architectural-bim.html">Architectural BIM</a>
+                </div>
+            </div>
+            <a href="courses.html">Courses</a>
             <a href="contact.html">Contact Us</a>
         </nav>
         <div class="header-actions">
@@ -29,32 +36,47 @@
 
     <section class="page-hero">
         <div>
-            <h1>Specialized Engineering Programs</h1>
-            <p>Master Autodesk Revit, 3ds Max, Navisworks, and C++ automation.</p>
+            <h1>Engineering & BIM Innovation</h1>
+            <p>Leading digital transformation in construction with expert engineers and advanced technology.</p>
         </div>
     </section>
 
+    <div class="stats-container">
+        <div class="stat-card">
+            <h3>+200</h3>
+            <p>Training Hours</p>
+        </div>
+        <div class="stat-card">
+            <h3>+10k</h3>
+            <p>Certified Trainees</p>
+        </div>
+        <div class="stat-card">
+            <h3>+6k</h3>
+            <p>Engineering Projects</p>
+        </div>
+    </div>
+
     <div class="courses-container">
         <div class="course-card">
-            <img src="https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=600&q=80" alt="Revit Course">
+            <img src="https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=600&q=80" alt="Structural Engineering">
             <div class="course-content">
-                <h3>Autodesk Revit Complete</h3>
-                <p>From absolute zero to professional engineering modeling.</p>
+                <h3>Structural BIM Track</h3>
+                <p>Advanced structural modeling, concrete framing, and clash detection handled by our trainees.</p>
             </div>
             <div class="course-footer">
-                <span class="price">Revit</span>
-                <a href="course-details.html" class="details-btn">View Details</a>
+                <span class="price">Professional</span>
+                <a href="structural-bim.html" class="details-btn">View Track</a>
             </div>
         </div>
         <div class="course-card">
-            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80" alt="3ds Max Course">
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80" alt="Architectural Design">
             <div class="course-content">
-                <h3>3ds Max Architectural Visualization</h3>
-                <p>Realistic rendering and advanced spatial design techniques.</p>
+                <h3>Architectural BIM Track</h3>
+                <p>Stunning architectural visualization, building facades, and real project execution.</p>
             </div>
             <div class="course-footer">
-                <span class="price">3ds Max</span>
-                <a href="course-details.html" class="details-btn">View Details</a>
+                <span class="price">Professional</span>
+                <a href="architectural-bim.html" class="details-btn">View Track</a>
             </div>
         </div>
     </div>
