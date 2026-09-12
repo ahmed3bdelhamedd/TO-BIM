@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Courses - T0-BIM</title>
+    <title>Course Details - T0-BIM</title>
     <link rel="icon" type="image/jpeg" href="TOBIM.jpg">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
@@ -12,11 +12,11 @@
 <body class="dark-mode">
     <header class="header">
         <a href="index.html" class="logo">
-            <img src="TOBIM.jpg" alt="T0-BIM Logo"> T0-BIM <span>Courses</span>
+            <img src="TOBIM.jpg" alt="T0-BIM Logo"> T0-BIM <span>Academy</span>
         </a>
         <nav class="navbar">
             <a href="index.html">Home</a>
-            <a href="courses.html" class="active">Courses</a>
+            <a href="courses.html">Courses</a>
             <a href="contact.html">Contact Us</a>
         </nav>
         <div class="header-actions">
@@ -26,41 +26,65 @@
         </div>
     </header>
 
-    <section class="page-hero">
+    <section class="page-hero" style="padding-bottom: 20px;">
         <div>
-            <h1>Specialized Engineering Programs</h1>
-            <p>Master Autodesk Revit, 3ds Max, Navisworks, and C++ automation.</p>
+            <h1>Autodesk Revit Complete Masterclass</h1>
+            <p>From absolute zero to professional engineering modeling.</p>
         </div>
     </section>
 
-    <div class="courses-container">
-        <div class="course-card">
-            <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80" alt="Revit Course">
-            <div class="course-content">
-                <h3>Autodesk Revit Complete</h3>
-                <p>From absolute zero to professional engineering modeling.</p>
+    <div class="course-details-layout">
+        <div>
+            <div class="course-tabs">
+                <button class="tab-btn active" onclick="switchTab(event, 'description')"><i class="fa-solid fa-book-open"></i> Description</button>
+                <button class="tab-btn" onclick="switchTab(event, 'instructor')"><i class="fa-solid fa-chalkboard-user"></i> Instructor</button>
+                <button class="tab-btn" onclick="switchTab(event, 'curriculum')"><i class="fa-solid fa-list-check"></i> Curriculum</button>
             </div>
-            <div class="course-footer">
-                <span class="price">Revit</span>
-                <a href="course-details.html#revit" class="details-btn">View Details</a>
+
+            <div id="description" class="tab-content active course-main-info">
+                <h2>About This Course</h2>
+                <p>Master modern engineering workflows and building information modeling. Learn how to transform complex architectural and structural concepts into highly accurate digital prototypes.</p>
+                <p>Gain complete mastery over parametric components, multidisciplinary coordination, clash detection, and construction document generation following strict industry standards.</p>
+            </div>
+
+            <div id="instructor" class="tab-content course-main-info">
+                <h2>Lead Instructor</h2>
+                <p>T0-BIM Expert Engineering Team with over 10 years of field experience in international BIM implementation, structural analysis, and automated tool development.</p>
+            </div>
+
+            <div id="curriculum" class="tab-content course-main-info">
+                <h2>Course Curriculum & Modules</h2>
+                <p>• Module 1: Introduction to BIM and Interface Setup.<br>• Module 2: Advanced Parametric Modeling.<br>• Module 3: Multidisciplinary Coordination and Clash Detection.<br>• Module 4: Final Project Execution and Shop Drawings.</p>
             </div>
         </div>
-        <div class="course-card">
-            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80" alt="3ds Max Course">
-            <div class="course-content">
-                <h3>3ds Max Architectural Visualization</h3>
-                <p>Realistic rendering and advanced spatial design techniques.</p>
-            </div>
-            <div class="course-footer">
-                <span class="price">3ds Max</span>
-                <a href="course-details.html#max" class="details-btn">View Details</a>
-            </div>
+
+        <div class="enroll-card">
+            <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80" alt="Course Thumbnail">
+            <div style="font-size: 13px; opacity: 0.7; margin-bottom: 5px;">Total Price:</div>
+            <div class="price-tag">799.00 EGP</div>
+            <ul class="features-list">
+                <li><i class="fa-solid fa-check"></i> Lifetime access to all lessons and videos</li>
+                <li><i class="fa-solid fa-check"></i> Support for Vodafone Cash & InstaPay</li>
+                <li><i class="fa-solid fa-check"></i> Practical application & step-by-step projects</li>
+            </ul>
+            <a href="contact.html" class="enroll-btn">Enroll in Course Now</a>
         </div>
     </div>
 
     <footer>
         @2026 T0-BIM
     </footer>
+
+    <script>
+        function switchTab(evt, tabName) {
+            const contents = document.querySelectorAll(".tab-content");
+            contents.forEach(c => c.classList.remove("active"));
+            const buttons = document.querySelectorAll(".tab-btn");
+            buttons.forEach(b => b.classList.remove("active"));
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
     <script src="js/script.js"></script>
 </body>
 </html>
