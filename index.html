@@ -3,28 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>توبيم أكاديمي | TOBIM Academy</title>
+    <title>توبيم  | TOBIM </title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <header class="header">
-        <div class="logo">TOBIM <span>Academy</span></div>
+        <a href="index.html" class="logo">TOBIM <span>Academy</span></a>
         <nav class="navbar">
             <a href="index.html" class="active">الرئيسية</a>
-            <a href="structural-bim.html">البيم الإنشائي</a>
-            <a href="architectural-bim.html">البيم المعماري</a>
+            <div class="dropdown">
+                <a href="#">الدبلومات الهندسية <i class="fas fa-chevron-down" style="font-size: 10px;"></i></a>
+                <div class="dropdown-content">
+                    <a href="structural-bim.html">البيم الإنشائي</a>
+                    <a href="architectural-bim.html">البيم المعماري</a>
+                </div>
+            </div>
             <a href="courses.html">الكورسات</a>
-            <a href="contact.html" class="btn-contact">تواصل معنا</a>
+            <a href="contact.html">تواصل معنا</a>
         </nav>
+        <div class="header-actions">
+            <button class="lang-btn">EN</button>
+            <a href="#" class="login-btn">تسجيل الدخول</a>
+            <a href="#" class="register-btn">إنشاء حساب</a>
+        </div>
     </header>
 
     <section class="page-hero">
         <div>
             <h1>مستقبل الهندسة يبدأ من هنا</h1>
-            <p>أكاديمية توبيم المتخصصة في تأهيل المهندسين لأحدث نظم نمذجة معلومات المباني.</p>
-            <a href="courses.html" class="btn btn-primary" style="background:#00f2fe; color:#0b0f19;">استكشف الدورات</a>
+            <p>أكاديمية توبيم المتخصصة في تأهيل المهندسين لأحدث نظم نمذجة معلومات المباني هندسياً وبرمجياً.</p>
+            <a href="courses.html" class="btn btn-main">استكشف الدورات الآن</a>
         </div>
     </section>
 </body>
