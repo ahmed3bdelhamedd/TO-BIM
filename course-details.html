@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Course Details - TO-BIM</title>
+    <title>Course Details - T0-BIM</title>
     <link rel="icon" type="image/jpeg" href="TOBIM.jpg">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
@@ -12,7 +12,7 @@
 <body class="dark-mode">
     <header class="header">
         <a href="index.html" class="logo">
-            <img src="TOBIM.jpg" alt="TO-BIM Logo"> TO-BIM <span>Details</span>
+            <img src="TOBIM.jpg" alt="T0-BIM Logo"> T0-BIM <span>Academy</span>
         </a>
         <nav class="navbar">
             <a href="index.html">Home</a>
@@ -22,25 +22,77 @@
         <div class="header-actions">
             <button class="mode-btn">☀️ Light</button>
             <button class="lang-btn">AR</button>
-            <a href="#" class="register-btn">Enroll Now</a>
+            <a href="#" class="register-btn">Register</a>
         </div>
     </header>
 
-    <section class="page-hero">
+    <section class="page-hero" style="padding-bottom: 20px;">
         <div>
-            <h1 id="course-title">Engineering Course Overview</h1>
-            <p id="course-desc">Detailed syllabus, curriculum structure, and real engineering project deliverables.</p>
+            <h1 id="course-title">Autodesk Revit Complete Masterclass</h1>
+            <p id="course-desc">From absolute zero to professional engineering modeling.</p>
         </div>
     </section>
 
-    <div style="padding: 0 8% 60px 8%; text-align: center;">
-        <img src="TOBIM.jpg" alt="Course Banner" style="max-width: 600px; width: 100%; border-radius: 12px; border: 1px solid var(--border-color); margin-bottom: 30px;">
-        <p style="max-width: 700px; margin: 0 auto; line-height: 1.8; opacity: 0.9;">This program provides comprehensive training through hands-on technical labs, live project implementations, and mentorship directly aligned with corporate BIM engineering standards.</p>
+    <!-- الهيكل الجديد المطابق تماماً للصورة -->
+    <div class="course-details-layout">
+        <div>
+            <!-- تبويبات التنقل -->
+            <div class="course-tabs">
+                <button class="tab-btn active" onclick="switchTab(event, 'description')"><i class="fa-solid fa-book-open"></i> Description</button>
+                <button class="tab-btn" onclick="switchTab(event, 'instructor')"><i class="fa-solid fa-chalkboard-user"></i> Instructor</button>
+                <button class="tab-btn" onclick="switchTab(event, 'curriculum')"><i class="fa-solid fa-list-check"></i> Curriculum</button>
+            </div>
+
+            <!-- محتوى تبويب الوصف -->
+            <div id="description" class="tab-content active course-main-info">
+                <h2>About This Course</h2>
+                <p id="course-text-1">Master modern engineering workflows and building information modeling. Learn how to transform complex architectural and structural concepts into highly accurate digital prototypes.</p>
+                <p id="course-text-2">Gain complete mastery over parametric components, multidisciplinary coordination, clash detection, and construction document generation following strict industry standards.</p>
+            </div>
+
+            <!-- محتوى تبويب المحاضر -->
+            <div id="instructor" class="tab-content course-main-info">
+                <h2>Lead Instructor</h2>
+                <p>T0-BIM Expert Engineering Team with over 10 years of field experience in international BIM implementation, structural analysis, and automated tool development using C++ and APIs.</p>
+            </div>
+
+            <!-- محتوى تبويب المنهج -->
+            <div id="curriculum" class="tab-content course-main-info">
+                <h2>Course Curriculum & Modules</h2>
+                <p>• Module 1: Introduction to BIM and Interface Setup.<br>• Module 2: Advanced Parametric Modeling.<br>• Module 3: Multidisciplinary Coordination and Clash Detection.<br>• Module 4: Final Project Execution and Shop Drawings.</p>
+            </div>
+        </div>
+
+        <!-- البطاقة الجانبية للسعر وزر التسجيل -->
+        <div class="enroll-card">
+            <img src="TOBIM.jpg" alt="Course Thumbnail">
+            <div style="font-size: 13px; opacity: 0.7; margin-bottom: 5px;">Total Price:</div>
+            <div class="price-tag">799.00 EGP</div>
+            <ul class="features-list">
+                <li><i class="fa-solid fa-check"></i> Lifetime access to all lessons and videos</li>
+                <li><i class="fa-solid fa-check"></i> Support for Vodafone Cash & InstaPay</li>
+                <li><i class="fa-solid fa-check"></i> Practical application & step-by-step projects</li>
+            </ul>
+            <a href="contact.html" class="enroll-btn">Enroll in Course Now</a>
+        </div>
     </div>
 
     <footer>
         @2026 T0-BIM
     </footer>
+
+    <script>
+        function switchTab(evt, tabName) {
+            const contents = document.querySelectorAll(".tab-content");
+            contents.forEach(c => c.classList.remove("active"));
+
+            const buttons = document.querySelectorAll(".tab-btn");
+            buttons.forEach(b => b.classList.remove("active"));
+
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
     <script src="js/script.js"></script>
 </body>
 </html>
