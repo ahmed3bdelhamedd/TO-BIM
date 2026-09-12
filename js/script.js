@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const modeBtn = document.querySelector(".mode-btn");
     const langBtn = document.querySelector(".lang-btn");
 
-    // التحقق من الوضع المحفوظ مسبقاً في المتصفح
     if (localStorage.getItem("theme") === "light") {
         document.body.classList.remove("dark-mode");
         if (modeBtn) modeBtn.textContent = "🌙 Dark";
