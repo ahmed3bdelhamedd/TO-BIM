@@ -9,10 +9,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary-gold: #fbc531;
+            --primary-blue: #00d2d3;
+            --secondary-blue: #0984e3;
             --dark-bg: #0b0f19;
             --dark-card: #131722;
-            --border-gold: rgba(251, 197, 49, 0.2);
+            --border-blue: rgba(0, 210, 211, 0.25);
             --text-main: #ffffff;
         }
 
@@ -35,7 +36,7 @@
             top: 0; left: 0; width: 100%;
             background: rgba(11, 15, 25, 0.95);
             backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border-gold);
+            border-bottom: 1px solid var(--border-blue);
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -56,11 +57,11 @@
         .logo img {
             width: 40px; height: 40px;
             border-radius: 50%;
-            border: 2px solid var(--primary-gold);
+            border: 2px solid var(--primary-blue);
         }
 
         .logo span {
-            color: var(--primary-gold);
+            color: var(--primary-blue);
         }
 
         .navbar {
@@ -78,7 +79,7 @@
         }
 
         .navbar a:hover, .navbar a.active {
-            color: var(--primary-gold);
+            color: var(--primary-blue);
         }
 
         .header-actions {
@@ -89,7 +90,7 @@
 
         .header-actions button, .header-actions a {
             background: transparent;
-            border: 1px solid var(--border-gold);
+            border: 1px solid var(--border-blue);
             color: #fff;
             padding: 8px 16px;
             border-radius: 8px;
@@ -101,7 +102,7 @@
         }
 
         .header-actions .register-btn {
-            background: var(--primary-gold);
+            background: var(--primary-blue);
             color: #0b0f19;
             border: none;
         }
@@ -109,8 +110,8 @@
         .elite-hero {
             position: relative;
             padding: 160px 8% 80px 8%;
-            background: linear-gradient(135deg, rgba(19, 23, 34, 0.95), rgba(11, 15, 25, 0.98));
-            border-bottom: 3px solid var(--primary-gold);
+            background: linear-gradient(135deg, rgba(9, 132, 227, 0.15), rgba(11, 15, 25, 0.98));
+            border-bottom: 3px solid var(--primary-blue);
         }
 
         .hero-grid {
@@ -130,9 +131,9 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: rgba(251, 197, 49, 0.12);
-            border: 1px solid var(--primary-gold);
-            color: var(--primary-gold);
+            background: rgba(0, 210, 211, 0.12);
+            border: 1px solid var(--primary-blue);
+            color: var(--primary-blue);
             padding: 8px 18px;
             border-radius: 30px;
             font-weight: 700;
@@ -149,7 +150,7 @@
         }
 
         .elite-hero h1 span {
-            color: var(--primary-gold);
+            color: var(--primary-blue);
         }
 
         .elite-hero p {
@@ -179,14 +180,14 @@
         }
 
         .stat-pill i {
-            color: var(--primary-gold);
+            color: var(--primary-blue);
             font-size: 18px;
         }
 
         .hero-img-box {
             border-radius: 20px;
             overflow: hidden;
-            border: 2px solid var(--primary-gold);
+            border: 2px solid var(--primary-blue);
             box-shadow: 0 25px 50px rgba(0,0,0,0.5);
             background: #1a1a1a;
         }
@@ -227,7 +228,7 @@
 
         .pillar-card {
             background: var(--dark-card);
-            border: 1px solid var(--border-gold);
+            border: 1px solid var(--border-blue);
             padding: 30px 20px;
             border-radius: 18px;
             transition: 0.3s ease;
@@ -235,16 +236,16 @@
 
         .pillar-card:hover {
             transform: translateY(-5px);
-            border-color: var(--primary-gold);
+            border-color: var(--primary-blue);
         }
 
         .pillar-icon {
             width: 55px; height: 55px;
-            background: rgba(251, 197, 49, 0.1);
+            background: rgba(0, 210, 211, 0.1);
             border-radius: 12px;
             display: flex; align-items: center; justify-content: center;
             font-size: 22px;
-            color: var(--primary-gold);
+            color: var(--primary-blue);
             margin-bottom: 20px;
         }
 
@@ -260,12 +261,12 @@
             line-height: 1.6;
         }
 
-        /* Working Independent 10-Image Architectural Slider */
+        /* Independent 10-Image Architectural Slider */
         .arch-slider-section {
             padding: 60px 8%;
             background: var(--dark-card);
-            border-top: 1px solid var(--border-gold);
-            border-bottom: 1px solid var(--border-gold);
+            border-top: 1px solid var(--border-blue);
+            border-bottom: 1px solid var(--border-blue);
         }
 
         .arch-carousel-wrapper {
@@ -274,7 +275,7 @@
             margin: 0 auto;
             border-radius: 20px;
             overflow: hidden;
-            border: 2px solid var(--primary-gold);
+            border: 2px solid var(--primary-blue);
             box-shadow: 0 20px 40px rgba(0,0,0,0.4);
             background: #1a1a1a;
             height: 420px;
@@ -312,8 +313,8 @@
             top: 50%;
             transform: translateY(-50%);
             background: rgba(19, 23, 34, 0.85);
-            border: 2px solid var(--primary-gold);
-            color: var(--primary-gold);
+            border: 2px solid var(--primary-blue);
+            color: var(--primary-blue);
             width: 50px;
             height: 50px;
             border-radius: 50%;
@@ -327,7 +328,7 @@
         }
 
         .arch-nav-btn:hover {
-            background: var(--primary-gold);
+            background: var(--primary-blue);
             color: #0b0f19;
         }
 
@@ -347,7 +348,7 @@
 
         .roadmap-step {
             background: var(--dark-card);
-            border: 1px solid var(--border-gold);
+            border: 1px solid var(--border-blue);
             padding: 30px 20px;
             border-radius: 16px;
             position: relative;
@@ -355,14 +356,14 @@
         }
 
         .roadmap-step:hover {
-            border-color: var(--primary-gold);
+            border-color: var(--primary-blue);
             transform: translateY(-5px);
         }
 
         .step-tag {
             font-size: 12px;
             font-weight: 800;
-            color: var(--primary-gold);
+            color: var(--primary-blue);
             text-transform: uppercase;
             letter-spacing: 1px;
             margin-bottom: 8px;
@@ -383,7 +384,7 @@
 
         .expert-card {
             background: linear-gradient(135deg, var(--dark-card), #0b0f19);
-            border: 2px solid var(--primary-gold);
+            border: 2px solid var(--primary-blue);
             border-radius: 20px;
             padding: 40px;
             margin: 60px 8%;
@@ -408,7 +409,7 @@
             object-fit: cover;
             object-position: center 5%;
             border-radius: 14px;
-            border: 2px solid var(--primary-gold);
+            border: 2px solid var(--primary-blue);
         }
 
         .expert-info h2 {
@@ -428,13 +429,13 @@
 
         .ultimate-pricing {
             background: linear-gradient(145deg, var(--dark-card), var(--dark-bg));
-            border: 2px solid var(--primary-gold);
+            border: 2px solid var(--primary-blue);
             border-radius: 20px;
             padding: 50px 30px;
             text-align: center;
             max-width: 600px;
             margin: 60px auto;
-            box-shadow: 0 20px 40px rgba(251, 197, 49, 0.15);
+            box-shadow: 0 20px 40px rgba(0, 210, 211, 0.15);
         }
 
         .ultimate-pricing h2 {
@@ -446,7 +447,7 @@
         .price-display {
             font-size: 48px;
             font-weight: 900;
-            color: var(--primary-gold);
+            color: var(--primary-blue);
             margin: 20px 0;
         }
 
@@ -472,26 +473,26 @@
 
         .btn-book-now {
             display: inline-block;
-            background: linear-gradient(135deg, #fbc531, #e1b12c);
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
             color: #0b0f19;
             padding: 15px 45px;
             border-radius: 40px;
             font-weight: 900;
             font-size: 16px;
             text-decoration: none;
-            box-shadow: 0 10px 25px rgba(251, 197, 49, 0.4);
+            box-shadow: 0 10px 25px rgba(0, 210, 211, 0.4);
             transition: 0.3s;
         }
 
         .btn-book-now:hover {
             transform: translateY(-3px);
-            box-shadow: 0 15px 30px rgba(251, 197, 49, 0.6);
+            box-shadow: 0 15px 30px rgba(0, 210, 211, 0.6);
         }
 
         footer {
             text-align: center;
             padding: 30px;
-            border-top: 1px solid var(--border-gold);
+            border-top: 1px solid var(--border-blue);
             opacity: 0.7;
             font-size: 14px;
         }
