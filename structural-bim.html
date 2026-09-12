@@ -182,26 +182,36 @@
             border-bottom: 1px solid var(--border-color);
         }
 
+        /* تصميم كارد المراحل بالصور المعززة */
         .roadmap-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
         }
 
         .roadmap-step {
             background: var(--bg-main);
             border: 1px solid var(--border-color);
-            padding: 25px 20px;
             border-radius: 16px;
-            position: relative;
             overflow: hidden;
+            position: relative;
+            transition: 0.3s;
         }
 
-        .roadmap-step::after {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; width: 4px; height: 100%;
-            background: var(--primary-gold);
+        .roadmap-step:hover {
+            border-color: var(--primary-gold);
+            transform: translateY(-5px);
+        }
+
+        .roadmap-step img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-bottom: 2px solid var(--primary-gold);
+        }
+
+        .roadmap-content {
+            padding: 20px;
         }
 
         .step-tag {
@@ -210,7 +220,7 @@
             color: var(--primary-gold);
             text-transform: uppercase;
             letter-spacing: 1px;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             display: block;
         }
 
@@ -247,7 +257,6 @@
             }
         }
 
-        /* تعديل مكان الصورة لتنزيل الوش بالكامل للأسفل */
         .expert-img {
             width: 100%;
             height: 260px;
@@ -360,6 +369,7 @@
         </div>
     </header>
 
+    <!-- الهيرو الإنشائي بصورة إنشائية صحيحة 100% -->
     <section class="elite-hero">
         <div class="hero-grid">
             <div>
@@ -373,11 +383,12 @@
                 </div>
             </div>
             <div class="hero-img-box">
-                <img src="https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=700&q=80" alt="Structural BIM">
+                <img src="https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=700&q=80" alt="Structural Engineering Model">
             </div>
         </div>
     </section>
 
+    <!-- ركائز البرنامج -->
     <section class="gallery-section">
         <h2 class="section-title">Program Core Pillars</h2>
         <p class="section-subtitle">Comprehensive breakdown covering technical office standards, concrete modeling, and multidisciplinary coordination.</p>
@@ -406,35 +417,48 @@
         </div>
     </section>
 
+    <!-- قسم مراحل الدبلومة مع الصور الإنشائية لكل مرحلة -->
     <section class="roadmap-section">
         <h2 class="section-title">Diploma Phases & Roadmap</h2>
         <p class="section-subtitle">Step-by-step training roadmap designed to take you from beginner to professional BIM Manager.</p>
         
         <div class="roadmap-grid">
             <div class="roadmap-step">
-                <span class="step-tag">Phase 01</span>
-                <h4>Foundations & Revit</h4>
-                <p>Introduction to BIM concepts, interface navigation, grids, levels, foundations, columns, beams, slabs, and stairs modeling.</p>
+                <img src="https://images.unsplash.com/photo-1541888946425-d0fbb18f1f3e?auto=format&fit=crop&w=600&q=80" alt="Foundations & Revit">
+                <div class="roadmap-content">
+                    <span class="step-tag">Phase 01</span>
+                    <h4>Foundations & Revit</h4>
+                    <p>Introduction to BIM concepts, interface navigation, grids, levels, foundations, columns, beams, slabs, and stairs modeling.</p>
+                </div>
             </div>
             <div class="roadmap-step">
-                <span class="step-tag">Phase 02</span>
-                <h4>Reinforcement & Detailing</h4>
-                <p>Deep dive into rebar settings, foundation reinforcement, slab mesh, wall details, and precise shop drawing generation.</p>
+                <img src="https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=600&q=80" alt="Reinforcement & Detailing">
+                <div class="roadmap-content">
+                    <span class="step-tag">Phase 02</span>
+                    <h4>Reinforcement & Detailing</h4>
+                    <p>Deep dive into rebar settings, foundation reinforcement, slab mesh, wall details, and precise shop drawing generation.</p>
+                </div>
             </div>
             <div class="roadmap-step">
-                <span class="step-tag">Phase 03</span>
-                <h4>Analysis & ACC CDE</h4>
-                <p>Integrating Robot Structural Analysis with Revit, and applying Common Data Environment (CDE) protocols within ACC.</p>
+                <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80" alt="Analysis & ACC CDE">
+                <div class="roadmap-content">
+                    <span class="step-tag">Phase 03</span>
+                    <h4>Analysis & ACC CDE</h4>
+                    <p>Integrating Robot Structural Analysis with Revit, and applying Common Data Environment (CDE) protocols within ACC.</p>
+                </div>
             </div>
             <div class="roadmap-step">
-                <span class="step-tag">Phase 04</span>
-                <h4>Graduation Project</h4>
-                <p>Executing a complete multidisciplinary real-world project, quantity takeoff, clash detection, and portfolio review.</p>
+                <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80" alt="Graduation Project">
+                <div class="roadmap-content">
+                    <span class="step-tag">Phase 04</span>
+                    <h4>Graduation Project</h4>
+                    <p>Executing a complete multidisciplinary real-world project, quantity takeoff, clash detection, and portfolio review.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- بطاقة المحاضر مع النزول بصورة صلاح بالكامل -->
+    <!-- بطاقة المحاضر مع صورة Salah.jpg وموضع الوش المظبوط -->
     <div class="expert-card">
         <img src="Salah.jpg" alt="Eng. Salah Elbadawy" class="expert-img" onerror="this.src='https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80'">
         <div class="expert-info">
@@ -445,6 +469,7 @@
         </div>
     </div>
 
+    <!-- بطاقة التسعير السعر الصحيح 8,900 EGP -->
     <div class="ultimate-pricing">
         <span class="elite-badge">Special Enrollment</span>
         <h2>Structural BIM Diploma</h2>
