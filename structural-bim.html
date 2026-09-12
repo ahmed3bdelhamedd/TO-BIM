@@ -188,7 +188,7 @@
             overflow: hidden;
             border: 2px solid var(--primary-gold);
             box-shadow: 0 25px 50px rgba(0,0,0,0.5);
-            background: #000;
+            background: #1a1a1a;
         }
 
         .hero-img-box img {
@@ -260,7 +260,7 @@
             line-height: 1.6;
         }
 
-        /* Working Independent 10-Image Slider */
+        /* Working Independent 10-Image Slider with Safe Fallback */
         .eng-slider-section {
             padding: 60px 8%;
             background: var(--dark-card);
@@ -276,7 +276,7 @@
             overflow: hidden;
             border: 2px solid var(--primary-gold);
             box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-            background: #000;
+            background: #1a1a1a;
             height: 420px;
         }
 
@@ -515,7 +515,7 @@
         </div>
     </header>
 
-    <!-- Elite Hero Section with Heavy Machinery / Road Roller Image -->
+    <!-- Elite Hero Section (Road Roller / Heavy Machinery) -->
     <section class="elite-hero">
         <div class="hero-grid">
             <div>
@@ -529,7 +529,7 @@
                 </div>
             </div>
             <div class="hero-img-box">
-                <img src="https://images.unsplash.com/photo-1541888946425-d0fbb18f1f3e?auto=format&fit=crop&w=700&q=80" alt="Heavy Machinery Road Roller">
+                <img src="https://images.unsplash.com/photo-1541888946425-d0fbb18f1f3e?auto=format&fit=crop&w=700&q=80" alt="Heavy Machinery Road Roller" onerror="this.src='https://picsum.photos/700/350?random=1'">
             </div>
         </div>
     </section>
@@ -563,7 +563,7 @@
         </div>
     </section>
 
-    <!-- Working Independent 10-Image Engineering Showcase Slider (First image matches Hero) -->
+    <!-- Working Independent 10-Image Engineering Showcase Slider -->
     <section class="eng-slider-section">
         <h2 class="section-title">Structural Engineering Gallery</h2>
         <p class="section-subtitle">Browse through 10 professional structural modeling, rebar detailing, and site execution examples using the navigation arrows.</p>
@@ -574,43 +574,43 @@
             
             <div class="eng-carousel-inner">
                 <div class="eng-carousel-slide active">
-                    <img src="https://images.unsplash.com/photo-1541888946425-d0fbb18f1f3e?auto=format&fit=crop&w=1000&q=80" alt="Heavy Machinery Road Roller">
+                    <img src="https://images.unsplash.com/photo-1541888946425-d0fbb18f1f3e?auto=format&fit=crop&w=1000&q=80" alt="Heavy Machinery" onerror="this.src='https://picsum.photos/1000/420?random=1'">
                     <div class="eng-carousel-caption">01. Heavy Machinery & Site Execution Operations</div>
                 </div>
                 <div class="eng-carousel-slide">
-                    <img src="https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=1000&q=80" alt="Project 2">
+                    <img src="https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=1000&q=80" alt="Project 2" onerror="this.src='https://picsum.photos/1000/420?random=2'">
                     <div class="eng-carousel-caption">02. Complex Rebar Detailing & BBS</div>
                 </div>
                 <div class="eng-carousel-slide">
-                    <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1000&q=80" alt="Project 3">
+                    <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1000&q=80" alt="Project 3" onerror="this.src='https://picsum.photos/1000/420?random=3'">
                     <div class="eng-carousel-caption">03. High-Load Foundation Analysis</div>
                 </div>
                 <div class="eng-carousel-slide">
-                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1000&q=80" alt="Project 4">
+                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1000&q=80" alt="Project 4" onerror="this.src='https://picsum.photos/1000/420?random=4'">
                     <div class="eng-carousel-caption">04. Multidisciplinary Clash Detection</div>
                 </div>
                 <div class="eng-carousel-slide">
-                    <img src="https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=1000&q=80" alt="Project 5">
+                    <img src="https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=1000&q=80" alt="Project 5" onerror="this.src='https://picsum.photos/1000/420?random=5'">
                     <div class="eng-carousel-caption">05. Concrete Slab Mesh & Reinforcement</div>
                 </div>
                 <div class="eng-carousel-slide">
-                    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1000&q=80" alt="Project 6">
+                    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1000&q=80" alt="Project 6" onerror="this.src='https://picsum.photos/1000/420?random=6'">
                     <div class="eng-carousel-caption">06. Skyscraper Structural Core Design</div>
                 </div>
                 <div class="eng-carousel-slide">
-                    <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1000&q=80" alt="Project 7">
+                    <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1000&q=80" alt="Project 7" onerror="this.src='https://picsum.photos/1000/420?random=7'">
                     <div class="eng-carousel-caption">07. ACC CDE Collaborative Workflows</div>
                 </div>
                 <div class="eng-carousel-slide">
-                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1000&q=80" alt="Project 8">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1000&q=80" alt="Project 8" onerror="this.src='https://picsum.photos/1000/420?random=8'">
                     <div class="eng-carousel-caption">08. Commercial Tower Execution Plans</div>
                 </div>
                 <div class="eng-carousel-slide">
-                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1000&q=80" alt="Project 9">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1000&q=80" alt="Project 9" onerror="this.src='https://picsum.photos/1000/420?random=9'">
                     <div class="eng-carousel-caption">09. Structural Analysis Simulation Lab</div>
                 </div>
                 <div class="eng-carousel-slide">
-                    <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1000&q=80" alt="Project 10">
+                    <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1000&q=80" alt="Project 10" onerror="this.src='https://picsum.photos/1000/420?random=10'">
                     <div class="eng-carousel-caption">10. Final Shop Drawing & Quantity Takeoff</div>
                 </div>
             </div>
